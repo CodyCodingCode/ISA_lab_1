@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Writer</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Note Writer</title>
 </head>
 <body>
-    <h1>Writer</h1>
-    <div id="notes-container">
+    <h1>Note Writer</h1>
+    <div id="notes">
         <!-- Notes will be dynamically added here -->
     </div>
-    <button id="add-note">Add Note</button>
-    <p id="last-saved">Last saved: N/A</p>
-    <button id="back-button" onclick="window.location.href='index.html'">Back</button>
-    <script src="js/main.js"></script>
+    <button id="addNote">Add Note</button>
+    <button id="backButton" onclick="location.href='index.html'">Back</button>
+    
+    <!-- Add this element for displaying the timestamp -->
+    <p id="lastSaved">Last Saved: -</p>
+
+    <script src="js/writer.js"></script>
 </body>
 </html>
