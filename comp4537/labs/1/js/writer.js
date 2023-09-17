@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to load notes from local storage and populate text areas
   function loadNotes() {
+    localStorage.clear();
     const notesFromStorage = JSON.parse(localStorage.getItem("notes"));
 
     // Select the "notes" div where notes will be added
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         removeButton.addEventListener("click", function () {
           // Remove the textarea and its contents from local storage
           const indexToRemove = notes.indexOf(noteText);
+
           if (indexToRemove !== -1) {
             notes.splice(indexToRemove, 1);
             saveNotes();
