@@ -20,6 +20,6 @@ button {
   margin: 10px;
 }
 
-#lastRetrieved {
+#lastRetrieved, #lastSaved {
   text-align: right;
 }

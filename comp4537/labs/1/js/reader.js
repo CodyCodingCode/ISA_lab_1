@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
     notesDiv.innerHTML = '';
 
     notesFromStorage.forEach((noteText) => {
-        const noteParagraph = document.createElement("p");
-        noteParagraph.textContent = noteText;
-        notesDiv.appendChild(noteParagraph);
+        const noteInput = document.createElement("textarea");
+        // noteInput.type = "text"; // Set the input type to text
+        noteInput.value = noteText;
+        noteInput.readOnly = true; // Make the input readonly
+
+        notesDiv.appendChild(noteInput);
     });
 
     const timestamp = new Date().toLocaleString();
     document.getElementById("lastRetrieved").textContent = "Last Retrieved: " + timestamp;
-}
+  }
 
 setInterval(retrieveNotes, 2000);
 
